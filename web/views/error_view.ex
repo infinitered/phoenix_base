@@ -1,4 +1,8 @@
 defmodule PhoenixBase.ErrorView do
+  @moduledoc """
+  Renders errors, such as 404 pages and any other kinds of errors.
+  """
+
   use PhoenixBase.Web, :view
 
   def render("404.html", _assigns) do

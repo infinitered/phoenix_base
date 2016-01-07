@@ -1,4 +1,14 @@
 defmodule PhoenixBase.UserSocket do
+  @moduledoc """
+  Contains the base websocket configuration for the app. This socket module
+  is used for negotiating any Phoenix Channel connections in this app.
+
+  For more information about Phoenix sockets, see these docs:
+
+  http://www.phoenixframework.org/docs/channels
+  http://hexdocs.pm/phoenix/Phoenix.Socket.html
+  """
+
   use Phoenix.Socket
 
   ## Channels
