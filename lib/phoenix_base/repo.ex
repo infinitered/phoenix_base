@@ -10,6 +10,8 @@ defmodule PhoenixBase.Repo do
 
   use Ecto.Repo, otp_app: :phoenix_base
 
+  import Ecto.Query, only: [from: 2]
+
   @doc """
   Count the results for a given query.
 
@@ -29,7 +31,7 @@ defmodule PhoenixBase.Repo do
   @doc """
   Reloads a given model from the database. Useful in tests to check if
   model attributes have been changed.
-  
+
   ## Example
 
       Repo.reload(%User{...})
@@ -70,4 +72,9 @@ defmodule PhoenixBase.Repo do
 
     all(query)
   end
+
+  defp to_atom(value) when is_binary(value) do
+    String.to_atom(value)
+  end
+  defp to_atom(value) when is_atom(value), do: value
 end
