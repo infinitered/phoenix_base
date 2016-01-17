@@ -13,11 +13,10 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 ## Continuous Integration
 
-Setting up a CI server such as [Semaphore](http://semaphorci.com) is easy with the included scripts. Set up your build to run these two commands:
+Setting up a CI server such as [Semaphore](http://semaphorci.com) is easy with the included scripts. Set up your build to run the setup command. (It also runs `bin/ci`)
 
 ```bash
-MIX_ENV=test bin/setup # Sets up the app dependencies and database
-bin/ci # Runs all the linting and tests
+MIX_ENV=test bin/setup
 ```
 
 ## Running Tests Locally

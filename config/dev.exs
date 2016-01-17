@@ -40,14 +40,4 @@ config :phoenix_base, PhoenixBase.Repo,
   hostname: "localhost",
   pool_size: 10
 
-# Configure linting settings
-config :dogma,
-  rule_set: Dogma.RuleSet.All,
-  exclude: [
-    ~r(\Aconfig/),
-    ~r(\Alib/\w+/endpoint.ex)
-  ],
-  override: %{
-    MatchInCondition => false,
-    LineLength => [max_length: 85]
-  }
+import_config "dogma.exs"

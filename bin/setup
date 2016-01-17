@@ -44,7 +44,7 @@ mix ecto.setup || { echo "Database could not be set up!"; exit 1; }
 echo "----------------------------------------------------------"
 echo "Running tests to verify setup is complete..."
 echo "----------------------------------------------------------"
-bin/ci
+bin/ci || { exit 1; }
 
 echo "----------------------------------------------------------"
 echo "Setup complete!"
