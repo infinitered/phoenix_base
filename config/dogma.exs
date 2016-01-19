@@ -5,7 +5,8 @@ config :dogma,
   rule_set: Dogma.RuleSet.All,
   exclude: [
     ~r(\Aconfig/),
-    ~r(\Alib/\w+/endpoint.ex)
+    ~r(\Alib/\w+/endpoint.ex),
+    ~r(node_modules/)
   ],
   override: %{
     MatchInCondition => false,
