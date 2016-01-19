@@ -27,15 +27,3 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
-
-# Configure linting settings
-config :dogma,
-  rule_set: Dogma.RuleSet.All,
-  exclude: [
-    ~r(\Aconfig/),
-    ~r(\Alib/\w+/endpoint.ex)
-  ],
-  override: %{
-    MatchInCondition => false,
-    LineLength => [max_length: 85]
-  }
