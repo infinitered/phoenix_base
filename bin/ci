@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+# Continuous Integration Script
+#
+# This script contains all the test commands for this app, and should be run on
+# your continuous integration server. Developers can then run it locally to see
+# if their changes will pass on the CI server, before pushing.
+#
+# It also allows the build settings to be changed by anyone with write access to
+# the project repo, making them easier to manage.
+
+npm test  || { echo 'Javascript tests failed!'; exit 1; }
+mix dogma || { echo 'Elixir code does not conform with Dogma!'; exit 1; }
+mix docs  || { echo 'Elixir HTML docs were not generated!'; exit 1; }
+mix test  || { echo 'Elixir tests failed!'; exit 1; }

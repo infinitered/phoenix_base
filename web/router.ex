@@ -1,4 +1,10 @@
 defmodule PhoenixBase.Router do
+  @moduledoc """
+  Routes URLs to the appropriate controllers and actions.
+
+  Docs: http://hexdocs.pm/phoenix/Phoenix.Router.html
+  """
+
   use PhoenixBase.Web, :router
 
   pipeline :browser do

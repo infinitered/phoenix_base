@@ -36,7 +36,10 @@ defmodule PhoenixBase.Mixfile do
      {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:earmark, ">= 0.0.0"},
+     {:ex_doc, ">= 0.0.0", only: [:dev, :test]},
+     {:dogma, ">= 0.0.0", only: [:dev, :test]}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

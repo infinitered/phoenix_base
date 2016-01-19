@@ -1,4 +1,10 @@
 defmodule PhoenixBase do
+  @moduledoc """
+  The root supervisor of the app. This is a good place to provide an
+  overview of your app's features and structure, since this doc is the
+  default home page for your ExDoc documentation.
+  """
+
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html

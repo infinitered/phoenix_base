@@ -1,6 +1,5 @@
 {
-  "repository": {
-  },
+  "repository": {},
   "dependencies": {
     "babel-brunch": "^6.0.0",
     "brunch": "^2.0.0",
@@ -8,5 +7,11 @@
     "css-brunch": ">= 1.0 < 1.8",
     "javascript-brunch": ">= 1.0 < 1.8",
     "uglify-js-brunch": ">= 1.0 < 1.8"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "test": "standard && ./node_modules/brunch/bin/brunch build"
   }
 }
