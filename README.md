@@ -2,6 +2,8 @@
 
 [![Build Status](https://semaphoreci.com/api/v1/projects/9501757c-f8e0-4a06-9b90-04f22ea5cd74/662754/badge.svg)](https://semaphoreci.com/ir/phoenix_base)
 
+PhoenixBase is maintained by [Infinite Red](http://infinite.red), a web and mobile development company based in Portland, OR and San Francisco, CA.
+
 To start your Phoenix app:
 
   1. Set up the app with `bin/setup`
