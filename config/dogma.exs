@@ -1,4 +1,5 @@
 use Mix.Config
+alias Dogma.Rule
 
 # Configure linting settings
 config :dogma,
@@ -8,7 +9,8 @@ config :dogma,
     ~r(\Alib/\w+/endpoint.ex),
     ~r(node_modules/)
   ],
-  override: %{
-    MatchInCondition => false,
-    LineLength => [max_length: 85]
-  }
+  override: [
+    %Rule.CommentFormat{enabled: false},
+    %Rule.MatchInCondition{enabled: false},
+    %Rule.LineLength{enabled: true, max_length: 120},
+  ]
