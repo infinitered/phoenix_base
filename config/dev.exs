@@ -39,5 +39,3 @@ config :phoenix_base, PhoenixBase.Repo,
   database: "phoenix_base_dev",
   hostname: "localhost",
   pool_size: 10
-
-import_config "dogma.exs"

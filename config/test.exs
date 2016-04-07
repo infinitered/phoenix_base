@@ -20,5 +20,3 @@ config :phoenix_base, PhoenixBase.Repo,
   password: System.get_env("DATABASE_POSTGRESQL_PASSWORD") || nil,
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
-
-import_config "dogma.exs"
