@@ -1,6 +1,7 @@
 # PhoenixBase
 
 [![Build Status](https://semaphoreci.com/api/v1/projects/9501757c-f8e0-4a06-9b90-04f22ea5cd74/662754/badge.svg)](https://semaphoreci.com/ir/phoenix_base)
+[![Deps Status](https://beta.hexfaktor.org/badge/all/github/infinitered/phoenix_base.svg)](https://beta.hexfaktor.org/github/infinitered/phoenix_base)
 
 PhoenixBase is maintained by [Infinite Red](http://infinite.red), a web and mobile development company based in Portland, OR and San Francisco, CA.
 
