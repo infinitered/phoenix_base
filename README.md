@@ -20,6 +20,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 - **Batteries included**. Scripts to set up the project, run all tests, etc.
 - **Slim** templating engine
 - **Webpack** for assets
+- **Ecto 2.0** for database
 
 ## Continuous Integration
 
