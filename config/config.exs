@@ -14,6 +14,10 @@ config :phoenix_base, PhoenixBase.Endpoint,
   pubsub: [name: PhoenixBase.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+# Configure Phoenix to use Slime instead of EEX
+config :phoenix, :template_engines,
+  slim: PhoenixSlime.Engine
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

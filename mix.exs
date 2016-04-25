@@ -32,6 +32,7 @@ defmodule PhoenixBase.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.1.2"},
      {:phoenix_ecto, "~> 2.0"},
+     {:phoenix_slime, "~> 0.5"},
      {:postgrex, ">= 0.11.0"},
      {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
