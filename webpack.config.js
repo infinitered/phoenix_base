@@ -14,6 +14,11 @@ if (isProduction) {
   plugins.push(new webpack.optimize.UglifyJsPlugin({minimize: true}))
 }
 
+// Bourbon + Neat
+// See http://forum.vuejs.org/topic/1367/integrating-bourbon-and-neat-with-vuejs-templates-webpack/2
+var neat = require('bourbon-neat').includePaths
+var bourbon = require('bourbon').includePaths
+
 module.exports = {
   entry: './web/static/js/app.js',
 
@@ -30,13 +35,17 @@ module.exports = {
       exclude: /(node_modules|bower_components)/,
       loader: 'babel',
       query: {
-        presets: ['es2015', 'react'],
+        presets: ['es2015'],
         plugins: ['transform-object-rest-spread']
       }
     }, {
       test: /\.(sass|scss)$/,
       loader: ExtractTextPlugin.extract('css?sourceMap!sass?sourceMap!import-glob')
     }]
+  },
+
+  sassLoader: {
+    includePaths: [bourbon, neat]
   },
 
   plugins: plugins
