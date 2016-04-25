@@ -41,40 +41,4 @@ defmodule PhoenixBase.Repo do
   def reload(model) do
     get(model.__struct__, model.id)
   end
-
-  @doc """
-  Gets the first row from a query, ordered by ID.
-
-  ## Example
-
-      Repo.first(User)
-      # => %User{...}
-  """
-  @spec first(Ecto.Queryable.t) :: Ecto.Schema.t | nil
-  def first(queryable) do
-    one(from m in queryable, limit: 1, order_by: m.id)
-  end
-
-  @doc """
-  Get all rows from a query which match the given conditions. Corresponds to
-  `Ecto.Repo.get_by`, but returns a list instead.
-
-  ## Example
-
-      Repo.all_by(User, name: "Joe")
-      # => [%User{...}, %User{...}]
-  """
-  @spec all_by(Ecto.Queryable.t, Keyword.t) :: [Ecto.Schema.t]
-  def all_by(queryable, conditions) do
-    query = Enum.reduce conditions, queryable, fn({field_name, value}, query) ->
-      from m in query, where: field(m, ^to_atom(field_name)) == ^value
-    end
-
-    all(query)
-  end
-
-  defp to_atom(value) when is_binary(value) do
-    String.to_atom(value)
-  end
-  defp to_atom(value) when is_atom(value), do: value
 end
