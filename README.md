@@ -21,6 +21,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 - **Slim** templating engine
 - **Webpack** for assets
 - **Ecto 2.0** for database
+- **Hound** for integration tests
 
 ## Continuous Integration
 

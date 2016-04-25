@@ -39,6 +39,7 @@ defmodule PhoenixBase.Mixfile do
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
      {:earmark, ">= 0.0.0"},
+     {:hound, "~> 1.0", only: [:dev, :test]},
      {:ex_doc, ">= 0.0.0", only: [:dev, :test]},
      {:dogma, ">= 0.0.0", only: [:dev, :test]}]
   end
