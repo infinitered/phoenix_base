@@ -22,6 +22,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 - **Webpack** for assets
 - **Ecto 2.0** for database
 - **Hound** for integration tests
+- **Swoosh** for email
 
 ## Continuous Integration
 

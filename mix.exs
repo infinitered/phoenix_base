@@ -19,7 +19,7 @@ defmodule PhoenixBase.Mixfile do
   def application do
     [mod: {PhoenixBase, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :swoosh]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,6 +39,7 @@ defmodule PhoenixBase.Mixfile do
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
      {:earmark, ">= 0.0.0"},
+     {:phoenix_swoosh, "~> 0.1"},
      {:hound, "~> 1.0", only: [:dev, :test]},
      {:ex_doc, ">= 0.0.0", only: [:dev, :test]},
      {:dogma, ">= 0.0.0", only: [:dev, :test]}]
