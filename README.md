@@ -36,6 +36,14 @@ MIX_ENV=test bin/setup
 
 You can also use `bin/ci` to run the tests locally to ensure everything will pass on your CI build.
 
+## Renaming the project
+
+Since it is likely you'll want to change the name of this project after you've cloned it, we've included a script to make it easy for you:
+
+```bash
+  bin/rename_project PhoenixBase phoenix_base CoolProject cool_project
+```
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
