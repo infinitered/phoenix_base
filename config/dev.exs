@@ -12,7 +12,10 @@ config :phoenix_base, PhoenixBase.Endpoint,
   code_reloader: true,
   cache_static_lookup: false,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin"]]
+  watchers: [
+    node: ["node_modules/webpack/bin/webpack.js",
+           "--watch-stdin", "--color", "--progress"]
+  ]
 
 # Watch static and templates for browser reloading.
 config :phoenix_base, PhoenixBase.Endpoint,
@@ -21,7 +24,7 @@ config :phoenix_base, PhoenixBase.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{web/views/.*(ex)$},
-      ~r{web/templates/.*(eex)$}
+      ~r{web/templates/.*(eex|slim)$}
     ]
   ]
 
@@ -39,3 +42,7 @@ config :phoenix_base, PhoenixBase.Repo,
   database: "phoenix_base_dev",
   hostname: "localhost",
   pool_size: 10
+
+# Configure mailer for local previews
+config :phoenix_base, PhoenixBase.Mailer,
+  adapter: Swoosh.Adapters.Local
