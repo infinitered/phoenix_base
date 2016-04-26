@@ -19,7 +19,8 @@
     "sass-loader": "^3.1.1",
     "standard": "^5.3.1",
     "style-loader": "^0.13.0",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "phantomjs-prebuilt": "^2.1.7"
   },
   "scripts": {
     "test": "standard && ./node_modules/webpack/bin/webpack.js",

@@ -4,7 +4,7 @@ use Mix.Config
 # you can enable the server option below.
 config :phoenix_base, PhoenixBase.Endpoint,
   http: [port: 4001],
-  server: false
+  server: true
 
 # Print only warnings and errors during test
 config :logger, level: :warn
@@ -20,3 +20,6 @@ config :phoenix_base, PhoenixBase.Repo,
   password: System.get_env("DATABASE_POSTGRESQL_PASSWORD") || nil,
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# Use PhantomJS for integration tests
+config :hound, driver: "phantomjs"

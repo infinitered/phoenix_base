@@ -15,6 +15,14 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+## Highlights
+
+- **Batteries included**. Scripts to set up the project, run all tests, etc.
+- **Slim** templating engine
+- **Webpack** for assets
+- **Ecto 2.0** for database
+- **Hound** for integration tests
+
 ## Continuous Integration
 
 Setting up a CI server such as [Semaphore](https://semaphoreci.com/) is easy with the included scripts. Set up your build to run the setup command. (It also runs `bin/ci`)
