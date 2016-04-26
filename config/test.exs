@@ -23,3 +23,7 @@ config :phoenix_base, PhoenixBase.Repo,
 
 # Use PhantomJS for integration tests
 config :hound, driver: "phantomjs"
+
+# Configure mailer for test mode
+config :phoenix_base, PhoenixBase.Mailer,
+  adapter: Swoosh.Adapters.Test

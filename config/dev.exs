@@ -42,3 +42,7 @@ config :phoenix_base, PhoenixBase.Repo,
   database: "phoenix_base_dev",
   hostname: "localhost",
   pool_size: 10
+
+# Configure mailer for local previews
+config :phoenix_base, PhoenixBase.Mailer,
+  adapter: Swoosh.Adapters.Local
