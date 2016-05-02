@@ -54,6 +54,9 @@ defmodule PhoenixBase.Web do
       import PhoenixBase.Router.Helpers
       import PhoenixBase.ErrorHelpers
       import PhoenixBase.Gettext
+
+      # Import Maybe, as it's common to want nil protection in views
+      import PhoenixBase.Maybe
     end
   end
 
