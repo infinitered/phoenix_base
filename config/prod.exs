@@ -13,7 +13,8 @@ use Mix.Config
 # which you typically run after static files are built.
 config :phoenix_base, PhoenixBase.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
+  url: [host: "example.com", port: {:system, "PORT"},
+        protocol_options: [compress: true]],
   cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
