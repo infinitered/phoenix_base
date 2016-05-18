@@ -4,4 +4,6 @@ defmodule PhoenixBase.LayoutView do
   """
 
   use PhoenixBase.Web, :view
+
+  import PhoenixBase.FlashView
 end

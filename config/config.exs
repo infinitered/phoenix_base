@@ -14,6 +14,9 @@ config :phoenix_base, PhoenixBase.Endpoint,
   pubsub: [name: PhoenixBase.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+# Configure Ecto Repos
+config :phoenix_base, ecto_repos: [PhoenixBase.Repo]
+
 # Configure Phoenix to use Slime instead of EEX
 config :phoenix, :template_engines,
   slim: PhoenixSlime.Engine
@@ -31,3 +34,4 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+

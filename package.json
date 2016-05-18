@@ -5,8 +5,8 @@
     "phoenix_html": "file:deps/phoenix_html"
   },
   "devDependencies": {
-    "bourbon": "^4.2.7",
-    "bourbon-neat": "^1.7.4",
+    "bourbon": "~4.2.7",
+    "bourbon-neat": "~1.7.4",
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
