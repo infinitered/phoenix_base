@@ -1,4 +1,4 @@
-= if has_flash?(@conn) do
+= if flash?(@conn) do
   section#flash-message
     = flash_message @conn, :error
     = flash_message @conn, :info

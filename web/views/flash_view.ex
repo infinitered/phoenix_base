@@ -7,7 +7,7 @@ defmodule PhoenixBase.FlashView do
 
   import Phoenix.Controller, only: [get_flash: 1, get_flash: 2]
 
-  def has_flash?(conn) do
+  def flash?(conn) do
     conn
     |> get_flash
     |> Enum.empty?
