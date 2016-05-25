@@ -3,9 +3,10 @@
 #
 # $ bin/rename_project PhoenixBase phoenix_base CoolProject cool_project
 
-sed -i '' -e "s/$1/$3/" `find . ! -path "./deps/*" -name "*.ex*"`
-sed -i '' -e "s/%$1/$3/" `find . ! -path "./deps/*" -name "*.ex*"`
-sed -i '' -e "s/$2/$4/" `find . ! -path "./deps/*" -name "*.ex*"`
+find . ! -path "./deps/*" -name "*.ex*" -print0 | xargs -0 sed -i -e "s/$1/$3/g"
+find . ! -path "./deps/*" -name "*.ex*" -print0 | xargs -0 sed -i -e "s/%$1/$3/g"
+find . ! -path "./deps/*" -name "*.ex*" -print0 | xargs -0 sed -i -e "s/$2/$4/g"
+
 mv lib/$2.ex lib/$4.ex
 mv lib/$2 lib/$4
 
