@@ -14,7 +14,7 @@ config :phoenix_base, PhoenixBase.Repo,
 # for your project. All adapters are listed here:
 #
 # https://hexdocs.pm/swoosh/Swoosh.Mailer.html
-config :phoenix_base, Phoenix.Mailer,
+config :phoenix_base, PhoenixBase.Mailer,
   adapter: Swoosh.Adapters.SMTP,
   relay: "smtp.example.com",
   username: {:system, "SMTP_USERNAME"},
