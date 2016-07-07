@@ -23,8 +23,13 @@ defmodule PhoenixBase.ModelCase do
     end
   end
 
-  setup _tags do
+  setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixBase.Repo)
+
+    unless tags[:async] do
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixBase.Repo, {:shared, self()})
+    end
+
     :ok
   end
 
@@ -51,7 +56,10 @@ defmodule PhoenixBase.ModelCase do
       iex> {:password, "is unsafe"} in changeset.errors
       true
   """
-  def errors_on(model, data) do
-    model.__struct__.changeset(model, data).errors
+  def errors_on(struct, data) do
+    struct
+    |> struct.__struct__.changeset(data)
+    |> Ecto.Changeset.traverse_errors(&PhoenixBase.ErrorHelpers.translate_error/1)
+    |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end
