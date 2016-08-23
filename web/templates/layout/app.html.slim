@@ -6,22 +6,16 @@ html lang="en"
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="" name="description"
     meta content="" name="author"
-    title Hello ApplicationName!
+    title Hello PhoenixBase!
     link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
 
   body
-    .container
-      header.header
-        nav role="navigation"
-          ul.nav.nav-pills.pull-right
-            li
-              a href="http://www.phoenixframework.org/docs" Get Started
-        span.logo
+    header = render "header.html", assigns
 
-      p.alert.alert-info role="alert"= get_flash(@conn, :info)
-      p.alert.alert-danger role="alert"= get_flash(@conn, :error)
+    main role="main"
+      = render "flash.html", assigns
+      = render @view_module, @view_template, assigns
 
-      main role="main"
-        = render @view_module, @view_template, assigns
+    footer = render "footer.html", assigns
 
     script src="#{static_path(@conn, "/js/app.js")}"

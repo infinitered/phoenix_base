@@ -19,7 +19,7 @@ defmodule PhoenixBase.Mixfile do
   def application do
     [mod: {PhoenixBase, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :swoosh]]
+                    :phoenix_ecto, :phoenix_pubsub, :postgrex, :swoosh]]
   end
 
   # Specifies which paths to compile per environment.
@@ -30,8 +30,9 @@ defmodule PhoenixBase.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.1.2"},
-     {:phoenix_ecto, "~> 3.0.0-rc.0"},
+    [{:phoenix, "~> 1.2.0"},
+     {:phoenix_pubsub, "~> 1.0"},
+     {:phoenix_ecto, "~> 3.0-rc"},
      {:phoenix_slime, "~> 0.5"},
      {:postgrex, ">= 0.11.0"},
      {:phoenix_html, "~> 2.3"},
