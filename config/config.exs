@@ -35,3 +35,5 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
+# Configure Slime
+config :slime, :keep_lines, true
