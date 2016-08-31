@@ -33,7 +33,7 @@ defmodule PhoenixBase.Mixfile do
     [{:phoenix, "~> 1.2.0"},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.0-rc"},
-     {:phoenix_slime, "~> 0.5"},
+     {:phoenix_slime, "~> 0.7"},
      {:postgrex, ">= 0.11.0"},
      {:phoenix_html, "~> 2.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
