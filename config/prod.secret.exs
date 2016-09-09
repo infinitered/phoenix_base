@@ -2,7 +2,12 @@ use Mix.Config
 
 # Configure endpoint with secret key
 config :phoenix_base, PhoenixBase.Endpoint,
-  secret_key_base: System.get_env("SECRET_KEY_BASE")
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  url: [
+    scheme: System.get_env("URL_SCHEME"),
+    host: System.get_env("URL_HOST"),
+    port: System.get_env("URL_PORT")
+  ]
 
 # Configure your database
 config :phoenix_base, PhoenixBase.Repo,
