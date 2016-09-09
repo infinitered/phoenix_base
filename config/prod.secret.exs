@@ -9,6 +9,12 @@ config :phoenix_base, PhoenixBase.Endpoint,
     port: System.get_env("URL_PORT")
   ]
 
+# More options: https://github.com/elixir-lang/plug/blob/master/lib/plug/ssl.ex
+if System.get_env("URL_SCHEME") == "https" do
+  config :phoenix_base, PhoenixBase.Endpoint,
+    force_ssl: [rewrite_on: [:x_forwarded_proto]]
+end
+
 # Configure your database
 config :phoenix_base, PhoenixBase.Repo,
   adapter: Ecto.Adapters.Postgres,
