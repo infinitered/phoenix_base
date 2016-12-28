@@ -45,6 +45,8 @@ Since it is likely you'll want to change the name of this project after you've c
   bin/rename_project PhoenixBase phoenix_base CoolProject cool_project
 ```
 
+Note: this command relies on `sed`. It has been tested on recent Mac versions of `sed` (macOS 10.11+) and GNU sed. If you're on a Mac and need to upgrade, try `brew install gnu-sed` and follow the instructions to update your $PATH.
+
 ## Front end
 
 PhoenixBase comes with a basic Bitters setup for front end HTML/CSS and grid. You can learn more about it
