@@ -1,5 +1,6 @@
 # PhoenixBase
 
+[![Slackin](https://infiniteredcommunity.herokuapp.com/badge.svg)](https://infiniteredcommunity.herokuapp.com/)
 [![Build Status](https://semaphoreci.com/api/v1/projects/9501757c-f8e0-4a06-9b90-04f22ea5cd74/662754/badge.svg)](https://semaphoreci.com/ir/phoenix_base)
 [![Deps Status](https://beta.hexfaktor.org/badge/all/github/infinitered/phoenix_base.svg)](https://beta.hexfaktor.org/github/infinitered/phoenix_base)
 [![Node Dependency Status](https://david-dm.org/infinitered/phoenix_base.svg)](https://david-dm.org/infinitered/phoenix_base)
