@@ -5,7 +5,7 @@
 [![Deps Status](https://beta.hexfaktor.org/badge/all/github/infinitered/phoenix_base.svg)](https://beta.hexfaktor.org/github/infinitered/phoenix_base)
 [![Node Dependency Status](https://david-dm.org/infinitered/phoenix_base.svg)](https://david-dm.org/infinitered/phoenix_base)
 
-PhoenixBase is maintained by [Infinite Red](http://infinite.red), a web and mobile development company based in Portland, OR and San Francisco, CA.
+PhoenixBase is maintained by [Infinite Red, Inc.](https://infinite.red), a web and mobile development company based in [Portland, OR](https://infinite.red/portland), [New Orleans, LA](https://infinite.red/new-orleans), and [San Francisco, CA](https://infinite.red/san-francisco).
 
 To start your Phoenix app:
 
